@@ -1,0 +1,93 @@
+<html>
+<head>
+	<style>
+		body {
+			background: salmon;
+		}
+		.bar-wrapper {
+			position: relative; 
+			left: 50%; 
+			width: 400px; 
+			height: 400px; 
+			background-color: #efefef;
+			transform: translateX(-50%); 
+			padding: 30px; 
+		}
+		
+		.bar {
+			margin: 100px auto; 
+/*
+			font-size: 16px; 
+			line-height: 16px;
+*/
+			padding: 5px; 
+			border-radius: 30px; 
+			background: rgba(0,0,0,0.1);
+			box-shadow: inset 0 2px 2px rgba(0,0,0,0.25),
+											  0 1px rgba(255,255,255,0.8);
+		}
+		
+		.bar span {
+			position: relative; 
+			display: inline-block; 
+			vertical-align: middle;
+			height: 20px; 
+			width: 20%;
+			background-color: salmon;
+			border-radius: 10px 0 0 10px; 
+			overflow: hidden;
+			background-size: 100%;
+			background-image: linear-gradient(		
+												to bottom, 
+												#f2395a, #b90c2b
+												);
+			animation: anime 4s linear infinite; 
+		}
+		
+		.bar span:after {
+			content: '';
+			display: block; 
+			position: absolute; 
+			top: 0; 
+			left: 0; 
+			bottom: 0; 
+			right: 0; 
+			background-size: 100%; 
+			background: linear-gradient(45deg,
+											#fff 0%, 
+											#fff 25%, 
+											rgba(0,0,0,0) 25%, 
+											rgba(0,0,0,0) 50%,
+											#fff 50%,
+											#fff 75%, 
+											rgba(0,0,0,0) 75%,
+											rgba(0,0,0,0) 100%
+											);
+			background-size: 30px 30px; 
+			opacity: 0.3;
+		}
+		
+		@keyframes anime {
+			0% {
+				width: 0%; 
+			}
+			100% {
+				width: 100%; 
+			}
+		}
+		
+		
+		
+		
+	
+	</style>
+</head>
+<body>
+	<div class="bar-wrapper">
+			<div class="bar">
+				<span class="span"></span>
+			</div>
+	</div>
+
+</body>
+</html>
